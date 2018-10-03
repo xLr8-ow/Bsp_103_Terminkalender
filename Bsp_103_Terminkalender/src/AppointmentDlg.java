@@ -2,12 +2,11 @@
 import java.time.LocalDateTime;
 import java.time.Month;
 
-
 public class AppointmentDlg extends javax.swing.JDialog {
 
     private Appointment app;
     private boolean ok;
-    
+
     public AppointmentDlg(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -20,7 +19,7 @@ public class AppointmentDlg extends javax.swing.JDialog {
     public Appointment getApp() {
         return app;
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -180,11 +179,11 @@ public class AppointmentDlg extends javax.swing.JDialog {
         int stunde = Integer.parseInt(tfStunde.getText());
         int minute = Integer.parseInt(tfMinute.getText());
         String text = tfText.getText();
-        
+
         LocalDateTime date = LocalDateTime.of(jahr, monat, tag, stunde, minute);
-        
+
         app = new Appointment(date, text);
-        
+
         ok = true;
         this.dispose();
     }//GEN-LAST:event_btÜbernehmenActionPerformed
@@ -194,7 +193,6 @@ public class AppointmentDlg extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btAbbrechenActionPerformed
 
-   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
